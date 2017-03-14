@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Your deck.js Presentation</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+  <link rel="stylesheet" media="screen" href="core/boilerplate.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <!-- 
+      Table of Contents 
+      Overview
+      Functions 
+      Classes 
+      Systems 
+      --> 
+
+    <!--
+      Formatting
+      Error Handling 
+      Boundaries 
+      Unit Tests
+      Emergence 
+      Concurrency
+      Successive Refinement 
+      JUnit Internals 
+      Refractoring SerialDate
+      Smells and Heuristics
+      
+      Show a headline of the progression of topics 
+     -->
+
+     <!-- Data should be abstracted one level up  --> 
+
+    <section class="slide">
+        <h1> Clean Code </h1>
+    </section>
+
+    <section class="slide">
+      <h2> Overview </h2>
+
+      <ul>
+        <li> Should be readable first glance </li>
+        <li> Mispellings could cause great debugging </li>
+        <li> Keep things minimal, single -> double -> triple </li> 
+      </ul>
+    </section> 
+
+    <section class="slide">
+        <h1> Functions </h1> 
+    </section>
+
+    <section class="slide">
+      <h2> Functions </h2>
+      <ul> 
+        <li> Functions should have one return statement </li> 
+        <li> Functions should have minimum parameters as possbile </li> 
+      </ul>
+    </section> 
+
+    <section class="slide">
+      <div class="left">
+        Content
+      </div>
+
+      <div class="right">
+        Content
+      </div> 
+    </section> 
+
+    <section class="slide">
+        <h1> Classes </h1>
+    </section> 
+
+    <section class="slide">
+      <h2> <!-- Functions --> · Classes </h2>
+        <ul> 
+          <li> Classes should be open to change so introduce interfaces and abstract classes (Decoupling). </li>
+        </ul> 
+    </section> 
+
+    <section class="slide">
+      <h1> Systems </h1>
+    </section>
+
+    <section class="slide">
+      <p> Abstractions should be from one level up or down <p> 
+      <p> dependency should be handled by one class </p> 
+      <p> Show the powers of Java 8 features </p> 
+    </section>
+
+    <section class="slide">
+      <h1> Concurrency </h1>
+    </section> 
+
+    <section class="slide">
+      <h2> Concurrency </h2>
+      <ul> 
+        <li> Java 8 library with thread safe collections </li>
+      </ul> 
+    </section>
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<script>
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
