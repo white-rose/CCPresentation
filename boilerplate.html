@@ -40,7 +40,9 @@
       Overview
       Functions 
       Classes 
-      Systems 
+      Systems
+      Concurrency
+      Boundaries?
       --> 
 
     <!--
@@ -49,7 +51,6 @@
       Boundaries 
       Unit Tests
       Emergence 
-      Concurrency
       Successive Refinement 
       JUnit Internals 
       Refractoring SerialDate
@@ -67,10 +68,11 @@
     <section class="slide">
       <h2> Overview </h2>
 
+      <p> Functions · Classes · Systems · Concurrency · Boundaries? </p>
       <ul>
         <li> Should be readable first glance </li>
         <li> Mispellings could cause great debugging </li>
-        <li> Keep things minimal, single -> double -> triple </li> 
+        <li> Keep things minimal. single -> double -> triple </li> 
       </ul>
     </section> 
 
@@ -82,11 +84,14 @@
       <h2> Functions </h2>
       <ul> 
         <li> Functions should have one return statement </li> 
-        <li> Functions should have minimum parameters as possbile </li> 
+        <img src="./CCPresentationPics/multipleReturns.png">
+        <li> Functions should have minimum parameters as possbile, so that testing all the different scenarios are easier </li> 
+        <li> One level abstraction per function, (helps with multithreading) Manger -> Resource -> Processor  </li>
+        <li> Have no Side Effects </li> 
       </ul>
     </section> 
 
-    <section class="slide">
+    <!--<section class="slide">
       <div class="left">
         Content
       </div>
@@ -94,7 +99,7 @@
       <div class="right">
         Content
       </div> 
-    </section> 
+    </section> -->
 
     <section class="slide">
         <h1> Classes </h1>
@@ -104,7 +109,9 @@
       <h2> <!-- Functions --> · Classes </h2>
         <ul> 
           <li> Classes should be open to change so introduce interfaces and abstract classes (Decoupling). </li>
+          <li> Hide the implementation </li>
         </ul> 
+        <img src="./CCPresentationPics/entity.png">
     </section> 
 
     <section class="slide">
@@ -112,9 +119,8 @@
     </section>
 
     <section class="slide">
-      <p> Abstractions should be from one level up or down <p> 
+      <h2> Systems </h2>
       <p> dependency should be handled by one class </p> 
-      <p> Show the powers of Java 8 features </p> 
     </section>
 
     <section class="slide">
@@ -125,6 +131,7 @@
       <h2> Concurrency </h2>
       <ul> 
         <li> Java 8 library with thread safe collections </li>
+        <img src="./CCPresentationPics/stream.png">
       </ul> 
     </section>
     <!-- End slides. -->
