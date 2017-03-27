@@ -29,6 +29,9 @@
 
   <!-- Required Modernizr file -->
   <script src="modernizr.custom.js"></script>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
 </head>
 <body>
   <div class="deck-container">
@@ -88,11 +91,42 @@
 
     <section class="slide">
       <div class="left">
-        Content
+              <h2> Old </h2>
+        <code class="prettyprint"> 
+            	public static void main(String[] args)
+	{	final int NUM_FACTS = 100;
+		for(int i = 0; i < NUM_FACTS; i++)
+			System.out.println( i + "! is " + factorial(i));
+	}
+	
+	public static int factorial(int n)
+	{	int result = 1;
+		for(int i = 2; i <= n; i++)
+			result *= i;
+		return result;
+	}
+}
+        </code> 
       </div>
 
       <div class="right">
-        Content
+        <h2> Refractored </h2>
+                <code class="prettyprint"> 
+            	public static void main(String[] args)
+	{	final int NUM_FACTS = 100;
+		for(int i = 0; i < NUM_FACTS; i++)
+			System.out.println( i + "! is " + factorial(i));
+	}
+	
+	public static int factorial(int n)
+	{	int result = 1;
+		for(int i = 2; i <= n; i++)
+			result *= i;
+		return result;
+	}
+}
+        </code> 
+        <div> Deji Alran </div>
       </div> 
     </section> 
 
@@ -105,7 +139,25 @@
         <ul> 
           <li> Classes should be open to change so introduce interfaces and abstract classes (Decoupling). </li>
         </ul> 
-    </section> 
+    </section>
+
+    <section class="slide">
+      <code class="prettyprint">
+                    	public static void main(String[] args)
+	{	final int NUM_FACTS = 100;
+		for(int i = 0; i < NUM_FACTS; i++)
+			System.out.println( i + "! is " + factorial(i));
+	}
+	
+	public static int factorial(int n)
+	{	int result = 1;
+		for(int i = 2; i <= n; i++)
+			result *= i;
+		return result;
+	}
+}
+      </code> 
+    </section>   
 
     <section class="slide">
       <h1> Systems </h1>

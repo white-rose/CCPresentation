@@ -1,11 +1,9 @@
 .left {
     float: left;
     width: 50%;
-    background-color: red;
 }
 
 .right {
     float: left;
-    background-color: blue;
     width: 50%;
 }
